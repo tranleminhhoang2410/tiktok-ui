@@ -9,7 +9,6 @@ import {
     faMagnifyingGlass,
     faSpinner,
     faKeyboard,
-    faCloudUpload,
     faGear,
     faCoins,
     faSignOut,
@@ -23,6 +22,8 @@ import images from '~/assets/images';
 import AccountItem from '../AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons'
+import Image from '~/components/Image'
 
 import 'tippy.js/dist/tippy.css';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
@@ -60,7 +61,7 @@ const MENU_ITEMS = [
     },
 ];
 
-function Header () {
+function Header() {
     const [searchResult, setSearchResult] = useState([]);
 
     useEffect(() => {
@@ -138,17 +139,17 @@ function Header () {
                         </button>
                     </div>
                 </HeadlessTippy>
-                
+
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy 
-                                delay={[0, 200]} 
+                            <Tippy
+                                delay={[0, 200]}
                                 offset={[12, 8]}
-                                content="Upload video" 
+                                content="Upload video"
                                 placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -158,12 +159,13 @@ function Header () {
                             <Button primary>Log in</Button>
                         </>
                     )}
-                    <Menu items={currentUser ? userMenu: MENU_ITEMS} onChange={handleMenuChange}>
+                    <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                                src="https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg"
+                                src="https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jp"
+                            // fallback="https://static.fullstack.edu.vn/static/media/f8-icon.7ad2b161d5e80c87e516.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
