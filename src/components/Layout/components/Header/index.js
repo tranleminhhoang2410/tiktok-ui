@@ -15,7 +15,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
-import { UploadIcon } from '~/components/Icons'
+import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons'
 import Image from '~/components/Image'
 import Search from '../Search'
 
@@ -114,6 +114,24 @@ function Header() {
                                 placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                delay={[0, 200]}
+                                offset={[12, 8]}
+                                content="Message"
+                                placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                delay={[0, 200]}
+                                offset={[12, 8]}
+                                content="Inbox"
+                                placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
