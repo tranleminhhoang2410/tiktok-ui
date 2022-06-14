@@ -11,7 +11,7 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '../AccountItem';
 import { useDebounce } from '~/hooks'
 
-import * as searchServices from '~/apiServices/searchServices'
+import * as searchServices from '~/services/searchService'
 import styles from './Search.module.scss'
 import classNames from 'classnames/bind';
 
