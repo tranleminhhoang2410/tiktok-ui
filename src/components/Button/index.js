@@ -5,7 +5,22 @@ import styles from "./Button.module.scss"
 
 const cx = classNames.bind(styles)
 
-function Button({ to, href, primary = false, outline = false, text = false, disabled = false, rounded = false, small = false, large = false, children, className, leftIcon, rightIcon, onClick, ...passProps }) {
+function Button({ 
+    to, 
+    href, 
+    primary = false, 
+    outline = false, 
+    text = false, 
+    disabled = false, 
+    rounded = false, 
+    small = false, 
+    large = false, 
+    children, 
+    className, 
+    leftIcon, 
+    rightIcon, 
+    onClick, 
+    ...passProps }) {
     let Comp = 'button'
     const props = {
         onClick,
@@ -50,7 +65,19 @@ function Button({ to, href, primary = false, outline = false, text = false, disa
 }
 
 Button.propTypes = {
-    children: PropTypes.node.isRequired
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    text: PropTypes.bool,
+    disabled: PropTypes.bool,
+    rounded: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    className: PropTypes.node,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.func,
 }
 
 export default Button;

@@ -8,7 +8,7 @@ import {
 
 import HeadlessTippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '../AccountItem';
+import AccountItem from '~/components/AccountItem';
 import { useDebounce } from '~/hooks'
 
 import * as searchServices from '~/services/searchService'
