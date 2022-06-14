@@ -26,4 +26,8 @@ function AccountItem({ data }) {
     );
 }
 
+AccountItem.propTypes = {
+    data: PropTypes.object
+}
+
 export default AccountItem;
